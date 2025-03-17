@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS Portal</title>
+    <link rel="shortcut icon" href="muet_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="muet_logo.png" alt="MUET Logo" class="logo">
+            <h2>Student Login</h2>
+            <p>MIS - Management Information System</p>
+            <div class="input-group">
+                <label for="cnic">CNIC Number</label>
+                <input type="text" id="cnic" placeholder="45401-4470349-9">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-con">
+                    <input type="password" id="password" placeholder="Enter Password">
+                    <i class="fas fa-eye" id="togglePassword"></i>
+                </div>
+                <span id="password-strength"></span>
+            </div>
+            <button onclick="login()">Sign In</button>
+            <div class="links">
+                <a href="signup.html">Please Signup</a> · <a href="#">Forgot Password?</a>
+            </div>
+            <footer>
+                <div class="footer">
+                    Mehran University of Engineering & Technology, Jamshoro
+                    © 2020 - 2025 MIS Portal - All Rights Reserved
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="./script/script.js" ></script>
+</body>
+</html>

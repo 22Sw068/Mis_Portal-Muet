@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="shortcut icon" href="muet_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/signup.css">
+    <!--  eye icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <img src="muet_logo.png" alt="MUET Logo" class="logo">
+            <h2>Create Account</h2>
+            <p>MIS - Management Information System</p>
+            <form>
+                <input type="text" placeholder="Roll Number" required>
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="CNIC Number" required>
+                <input type="text" placeholder="Confirm CNIC Number" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="WhatsApp Number" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="password" required>
+                    <i class="fas fa-eye" id="togglePassword"></i>
+                </div>
+                <p class="password-rule">Must be at least 8 characters, including letters, numbers, and special characters (@ ! # $ %)</p>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="signup-forgot">
+                <span>Already have an account? <a href="index.html">Please Login</a></span>
+            </div>
+            <footer>
+                <div class="footer">
+                    Mehran University of Engineering & Technology, Jamshoro<br>
+                    © 2020 - 2025 MIS Portal - All Rights Reserved
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle password visibility
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+        togglePassword.addEventListener("click", function () {
+            // Toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            // Toggle the eye icon
+            this.classList.toggle("fa-eye");
+            this.classList.toggle("fa-eye-slash");
+        });
+    </script>
+</body>
+</html>
